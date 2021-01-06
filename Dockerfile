@@ -1,5 +1,8 @@
-FROM ubuntu
+FROM maven:3-jdk-8
 
-RUN apt-get update 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-CMD [“echo”,”Image created”] 
+ONBUILD ADD . /usr/src/app
+
+ONBUILD RUN mvn install
