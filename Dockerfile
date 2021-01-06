@@ -1,4 +1,1 @@
-FROM ubuntu  
-
-
-CMD [“echo”,”Image created”] 
+FROM ubuntu
